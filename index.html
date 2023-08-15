@@ -11,6 +11,7 @@
   <title>Frontend Mentor | News homepage</title>
 </head>
 <body>
+  <div class="container">
 
   <header>
     <img src="./assets/images/logo.svg" alt="" class="logo">
@@ -25,11 +26,14 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <section class="featured">
       <article>
         <!-- make this a picture element -->
-        <img src="./assets/images/image-web-3-desktop.jpg" alt="" class="featured-img">
+        <picture>
+          <source srcset="./assets/images/image-web-3-desktop.jpg" media="(min-width: 37.5rem)">
+          <img src="./assets/images/image-web-3-mobile.jpg" alt="" class="featured-img">
+        </picture>
         <h1>The Bright Future of Web 3.0?</h1>
         <div class="article-content">
           <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
@@ -40,7 +44,7 @@
 
     <!-- New articles -->
     <section class="new-stories">
-      <h2>New</h2>
+      <h2 class="new-stores-heading">New</h2>
       <ul class="new-stories_list">
         <li class="new-story_item">
           <article> 
@@ -68,7 +72,7 @@
       <ul class="trending-stories_list">
         <li>
           <article>
-            <img src="" alt="" class="trending-img">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="" class="trending-img">
             <div class="trending-story-content">
               <span class="trending-list-number">01</span>
               <h4>Reviving Retro PCs</h4>
@@ -78,7 +82,7 @@
         </li>
         <li>
           <article>
-            <img src="" alt="" class="trending-img">
+            <img src="./assets/images/image-top-laptops.jpg" alt="" class="trending-img">
             <div class="trending-story-content">
               <span class="trending-list-number">02</span>
               <h4>Top 10 Laptops of 2022</h4>
@@ -88,7 +92,7 @@
         </li>
         <li>
           <article>
-            <img src="" alt="" class="trending-img">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="" class="trending-img">
             <div class="trending-story-content">
               <span class="trending-list-number">03</span>
               <h4>The Growth of Gaming</h4>
@@ -100,7 +104,7 @@
     </section>
 
   </main>
-  
+  </div> 
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
