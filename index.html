@@ -11,22 +11,31 @@
   <title>Frontend Mentor | News homepage</title>
 </head>
 <body>
-  <div class="container">
 
-  <header>
+  <header class="header container">
     <img src="./assets/images/logo.svg" alt="" class="logo">
     <nav>
       <ul class="nav-list">
-        <li class="nav-item">Home</li>
-        <li class="nav-item">New</li>
-        <li class="nav-item">Popular</li>
-        <li class="nav-item">Trending</li>
-        <li class="nav-item">Categories</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">New</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Trending</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Categories</a>
+        </li>
       </ul>
     </nav>
   </header>
 
-  <main class="main">
+  <main class="main container grid">
     <section class="featured">
       <article>
         <!-- make this a picture element -->
@@ -37,7 +46,7 @@
         <h1>The Bright Future of Web 3.0?</h1>
         <div class="article-content">
           <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
-          <a href="#" class="button">Read more</a>
+          <a href="javascript:;" class="button read-more-btn">Read more</a>
         </div>
       </article>
     </section>
@@ -70,30 +79,30 @@
     <!-- Trending stories -->
     <section class="trending-stories">
       <ul class="trending-stories_list">
-        <li>
-          <article>
+        <li class="trending-story_item">
+          <article class="trending-article flex">
             <img src="./assets/images/image-retro-pcs.jpg" alt="" class="trending-img">
-            <div class="trending-story-content">
+            <div class="trending-story_content flex">
               <span class="trending-list-number">01</span>
               <h4>Reviving Retro PCs</h4>
               <p>What happens when old PCs are given modern upgrades?</p>
             </div>
           </article>
         </li>
-        <li>
-          <article>
+        <li class="trending-story_item">
+          <article class="trending-article flex">
             <img src="./assets/images/image-top-laptops.jpg" alt="" class="trending-img">
-            <div class="trending-story-content">
+            <div class="trending-story_content flex">
               <span class="trending-list-number">02</span>
               <h4>Top 10 Laptops of 2022</h4>
               <p>Our best picks for various needs and budgets.</p>
             </div>
           </article>
         </li>
-        <li>
-          <article>
+        <li class="trending-story_item">
+          <article class="trending-article flex">
             <img src="./assets/images/image-gaming-growth.jpg" alt="" class="trending-img">
-            <div class="trending-story-content">
+            <div class="trending-story_content flex">
               <span class="trending-list-number">03</span>
               <h4>The Growth of Gaming</h4>
               <p>  How the pandemic has sparked fresh opportunities.</p>
@@ -104,7 +113,7 @@
     </section>
 
   </main>
-  </div> 
+
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.

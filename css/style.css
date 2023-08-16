@@ -57,11 +57,6 @@ html, body {
   height: 100%;
 }
 
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
@@ -82,14 +77,21 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* BASE STYLES */
 body {
+  min-height: 100vh;
+  /* display: flex;
+  flex-direction: column; */
+
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
+  line-height: 1.6;
   background: var(--clr-white);
   color: var(--clr-gunmetal);
 }
 
 .container {
   padding: 0 1rem;
+  max-width: 1110px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -100,32 +102,57 @@ h1 {
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+.grid { display: grid; }
+.flex { display: flex; }
 
+/* Button Styles */
 a.button {
+  font-family: inherit; 
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 10ch;
+  min-height: 44px;
+}
+
+a.read-more-btn {
+  padding: 0.95em 2.25em;
   color: var(--clr-white);
-  font-family: inherit;
+  background-color: var(--clr-soft-red);
   font-size: var(--fs-300);
   text-transform: uppercase;
-  letter-spacing: 2.75rem;
+  letter-spacing: 0.275rem;
+  font-weight: var(--fw-bold);  
 }
+
+.main {
+  padding-bottom: 4.5rem;
+  gap: 4rem;
+}
+
 
 
 /* Typography */
 /* h1 element */
 .featured h1 {
+  margin-bottom: 1rem;
   font-size: var(--fs-700);
   font-weight: var(--fw-black);
-  line-height: 2.5rem;
+  line-height: 1.1;
   color: var(--clr-dark-space-blue);
 }
 
 /* h2 element */
 .new-stories h2 {
+  margin-bottom: 1.5rem;
   font-size: var(--fs-650);
   color: var(--clr-soft-orange);
 }
 /* h3 element */
 .new-stories_list h3 {
+  margin-bottom: 0.5rem;
   font-size: var(--fs-600);
   font-weight: var(--fw-black);
   color: var(--clr-white);
@@ -146,6 +173,61 @@ a.button {
 
 /* General Styles */
 
+.header {
+  padding-top: 1.75rem;
+  padding-bottom: 2rem;
+}
+
+.logo {
+  max-width: 2.75rem;
+}
+
+.nav-list,
+.new-stories_list,
+.trending-stories_list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--clr-dark-space-blue);
+}
+
+
+/* Featured Article Section*/
+.featured-img,
+.featured .article-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* New Stories Section */
 .new-stories {
+  padding: 1.5rem;
   background: var(--clr-dark-space-blue);
+}
+
+.new-story_item:not(:last-of-type) {
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--clr-gunmetal);
+} 
+
+/* Trending Stories Section */
+
+.trending-article {
+  gap: 1.5rem;
+}
+
+.trending-story_item:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+.trending-img {
+  max-width: 6.25rem;
+}
+
+.trending-story_content {
+	flex-direction: column;
+	justify-content: space-between;
 }
