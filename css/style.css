@@ -105,6 +105,21 @@ h1 {
 .grid { display: grid; }
 .flex { display: flex; }
 
+/* hide elements */
+.visually-hidden {
+  position: absolute;
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}  
+
+
 /* Button Styles */
 a.button {
   font-family: inherit; 
@@ -115,6 +130,8 @@ a.button {
 
   min-width: 10ch;
   min-height: 44px;
+
+  transition: 200ms all ease-in-out;
 }
 
 a.read-more-btn {
@@ -125,6 +142,17 @@ a.read-more-btn {
   text-transform: uppercase;
   letter-spacing: 0.275rem;
   font-weight: var(--fw-bold);  
+}
+
+a.read-more-btn:hover,
+a.read-more-btn:active {
+  background-color: var(--clr-dark-space-blue);
+}
+
+a.read-more-btn:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px var(--clr-dark-space-blue);
 }
 
 .main {
@@ -160,12 +188,14 @@ a.read-more-btn {
 
 /* h4 element */
 .trending-stories_list h4 {
+  margin: 0.75rem 0 0.5rem 0;
   font-size: var(--fs-500);
   font-weight: var(--fw-black);
   color: var(--clr-dark-space-blue);
 }
 
 .trending-list-number {
+  /* margin-bottom: 0.75rem; */
   font-size: 2rem;
   line-height: 2rem;
   color: var(--clr-silver);
@@ -174,7 +204,7 @@ a.read-more-btn {
 /* General Styles */
 
 .header {
-  padding-top: 1.75rem;
+  margin-top: 1.75rem;
   padding-bottom: 2rem;
 }
 
@@ -189,10 +219,49 @@ a.read-more-btn {
   padding: 0;
 }
 
-.nav-link {
+/* Navigation */
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.nav-list a {
   text-decoration: none;
   color: var(--clr-dark-space-blue);
 }
+
+@media (max-width: 760px) {
+
+  .primary-navigation {
+    display: none;
+  }
+
+  .primary-navigation[data-visible] {
+    display: block;
+    position: fixed;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.25em;
+  }
+  
+  .mobile-nav-toggle .icon-close {
+    display: none;
+  }
+}
+
+
+
 
 
 /* Featured Article Section*/
@@ -200,8 +269,6 @@ a.read-more-btn {
 .featured-article_content p {
   margin-bottom: 1.5rem;
 }
-
-
 
 
 
@@ -224,6 +291,7 @@ a.read-more-btn {
 /* Trending Stories Section */
 
 .trending-article {
+  min-height: 100%;
   gap: 1.5rem;
 }
 
@@ -233,6 +301,7 @@ a.read-more-btn {
 
 .trending-img {
   max-width: 6.25rem;
+  object-fit: cover;
 }
 
 .trending-story_content {
@@ -276,7 +345,7 @@ a.read-more-btn {
     justify-content: space-between;
   }
 
-  .trending-story_item {
+  .trending-story_item:not(:last-of-type) {
     margin-bottom: 0;
   }
 }
@@ -299,4 +368,9 @@ a.read-more-btn {
     gap: 1.875rem;
   }
 
+}
+
+
+.trending-article {
+  border: 1px solid red;
 }

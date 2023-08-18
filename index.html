@@ -11,32 +11,33 @@
   <title>Frontend Mentor | News homepage</title>
 </head>
 <body>
+  <!-- use page wrapper to apply overlay when mobile menu activate -->
+  <div class="page-wrapper">
 
-  <!-- <header class="header container">
-    <img src="./assets/images/logo.svg" alt="" class="logo">
-    <nav>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">New</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Popular</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Trending</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Categories</a>
-        </li>
-      </ul>
-    </nav>
-  </header> -->
+  <header class="header">
+    <div class="container">
+      <div class="nav-wrapper">
+        <img src="./assets/images/logo.svg" alt="" class="logo">
+        <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+          <img class="icon-hamburger" src="./assets/images/icon-menu.svg" alt="" aria-hidden="true">
+          <img class="icon-close" src="./assets/images/icon-menu-close.svg" alt="" aria-hidden="true">
+          <!-- make this 'sr-only' -->
+          <span class="visually-hidden">Menu</span>
+        </button>
+        <nav class="primary-navigation" id="primary-navigation">
+          <ul class="nav-list" aria-label="Primary" role="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Trending</a></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-  <!-- *** inline style - Temp Only -->
-  <main class="main container grid" style="padding-top: 3rem">
+  <main class="main container grid">
     <section class="featured">
       <article class="featured-article grid">
         <picture class="featured-picture">
@@ -82,7 +83,7 @@
         <li class="trending-story_item">
           <article class="trending-article flex">
             <img src="./assets/images/image-retro-pcs.jpg" alt="" class="trending-img">
-            <div class="trending-story_content flex">
+            <div class="trending-story_content">
               <span class="trending-list-number">01</span>
               <h4>Reviving Retro PCs</h4>
               <p>What happens when old PCs are given modern upgrades?</p>
@@ -92,7 +93,7 @@
         <li class="trending-story_item">
           <article class="trending-article flex">
             <img src="./assets/images/image-top-laptops.jpg" alt="" class="trending-img">
-            <div class="trending-story_content flex">
+            <div class="trending-story_content">
               <span class="trending-list-number">02</span>
               <h4>Top 10 Laptops of 2022</h4>
               <p>Our best picks for various needs and budgets.</p>
@@ -102,7 +103,7 @@
         <li class="trending-story_item">
           <article class="trending-article flex">
             <img src="./assets/images/image-gaming-growth.jpg" alt="" class="trending-img">
-            <div class="trending-story_content flex">
+            <div class="trending-story_content">
               <span class="trending-list-number">03</span>
               <h4>The Growth of Gaming</h4>
               <p>  How the pandemic has sparked fresh opportunities.</p>
@@ -113,7 +114,7 @@
     </section>
 
   </main>
-
+  </div>
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
