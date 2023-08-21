@@ -81,7 +81,6 @@ body {
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
-
   font-family: var(--ff-primary);
   font-size: var(--fs-400);
   line-height: 1.6;
@@ -99,15 +98,22 @@ h1 {
 }
 
 /* Components and Utility Classes */
-/* *** Move utility classes to bottom of file */
 .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { 
+  color: var(--clr-dark-space-blue); 
+  text-decoration: none;
+}
+
+.attribution a:hover,
+.attribution a:active {
+  color: var(--clr-soft-red);
+}
 
 .grid { display: grid; }
 .flex { display: flex; }
 
 /* hide elements */
-.visually-hidden {
+.sr-only {
   position: absolute;
   position: absolute !important;
   width: 1px !important;
@@ -120,6 +126,14 @@ h1 {
   border: 0 !important;
 }  
 
+.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  transition: 200ms all ease-in-out;
+}
+
 /* Button Styles */
 a.button {
   font-family: inherit; 
@@ -127,11 +141,8 @@ a.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-width: 10ch;
   min-height: 44px;
-
-  transition: 200ms all ease-in-out;
 }
 
 a.read-more-btn {
@@ -153,11 +164,6 @@ a.read-more-btn:focus {
   outline-style: solid;
   outline-color: transparent;
   box-shadow: 0 0 0 4px var(--clr-dark-space-blue);
-}
-
-.main {
-  padding-bottom: 4.5rem;
-  gap: 4rem;
 }
 
 
@@ -206,6 +212,10 @@ a.read-more-btn:focus {
   padding-bottom: 2rem;
 }
 
+.main {
+  gap: 4rem;
+}
+
 .logo {
   max-width: 2.75rem;
 }
@@ -215,6 +225,26 @@ a.read-more-btn:focus {
 .trending-stories_list {
   list-style: none;
   padding: 0;
+}
+
+.article-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.new-story_item .article-link:hover,
+.new-story_item .article-link:active {
+  color: var(--clr-soft-orange);
+}
+
+.trending-story_content .article-link:hover,
+.trending-story_content .article-link:active {
+  color: var(--clr-soft-red);
+}
+
+.footer {
+  margin-top: auto;
+  padding: 5rem 0 2.5rem;
 }
 
 /* Navigation */
@@ -316,7 +346,7 @@ a.read-more-btn:focus {
 }
 
 .new-story_item p {
-  max-width: 33ch;
+  max-width: 42ch;
 }
 
 /* Trending Stories Section */
@@ -325,7 +355,6 @@ a.read-more-btn:focus {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
-  align-items: stretch;
 }
 
 .trending-article {
@@ -349,7 +378,7 @@ a.read-more-btn:focus {
 }
 
 /* Tablet Styles */
-@media (min-width: 760px) {
+@media (min-width: 700px) {
   .main {
     grid-template-columns: 1fr 1fr;
   }
@@ -359,6 +388,7 @@ a.read-more-btn:focus {
 
   .featured-article {
     grid-template-columns: 1fr 1fr;
+    gap: 0.75em;
   }
   .featured-picture {
     grid-column: span 2;
