@@ -1,11 +1,10 @@
-// Navigation
-const body = document.querySelector('body');
-const header = document.querySelector('.header');
+// Mobile Navigation
 const navToggle = document.getElementById('mobile-nav-toggle');
-const primaryNav = document.getElementById('primary-navigation');
-
 
 navToggle.addEventListener('click', () => {
+  const body = document.querySelector('body');
+  const header = document.querySelector('.header');
+  const primaryNav = document.getElementById('primary-navigation');
 
   primaryNav.hasAttribute('data-visible') 
     ? navToggle.setAttribute('aria-expanded', false)
@@ -15,6 +14,4 @@ navToggle.addEventListener('click', () => {
 
   body.classList.toggle('no-scroll');
   header.toggleAttribute('data-overlay');
-
-
-})
+});
