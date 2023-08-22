@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl/hub)
+- [Live Site URL](https://news-homepage-eight-virid.vercel.app/)
 
 ## My process
 
@@ -47,7 +47,7 @@ Users should be able to:
 ### Useful resources
 
 - [Modern CSS Solutions](https://moderncss.dev/) - This resource from Stephanie Eckles where she provides solutions to all sorts of CSS problems and patterns is really incredible and one I keep coming back to over and over again.
-- [Kevin Powell](https://www.youtube.com/watch?v=h3bTwCqX4ns) - I largely followed Kevin's technique on building out the movile navigation he demonstrates in this series of videos, where he's developing a different Frontend Mentor challenge project. This is the first time using this specific format for the mobile nav and it was fun playing around with the styles to fit my needs. The end result isn't the most fully functional nav (or the prettiest) but it matches the design comp sufficiently and serves as a good starting point for more advanced nav menu behavior.
+- [Kevin Powell](https://www.youtube.com/watch?v=h3bTwCqX4ns) - I largely followed Kevin's technique on building out the mobile navigation he demonstrates in this series of videos, where he's developing a different Frontend Mentor challenge project. This is the first time using this specific format for the mobile nav and it was fun playing around with the styles to fit my needs. The end result isn't the most fully functional nav (or the prettiest) but it matches the design comp sufficiently and serves as a good starting point for more advanced nav menu behavior.
 
 
 ## Author
